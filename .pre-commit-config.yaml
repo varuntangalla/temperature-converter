@@ -1,0 +1,8 @@
+repos:
+-   repo: https://github.com/thoughtworks/talisman
+    rev: 'v1.32.0'  # Update me!
+    hooks:
+      # both pre-commit and pre-push supported
+      # -   id: talisman-push
+      - id: talisman-commit
+        entry: cmd --githook pre-commit

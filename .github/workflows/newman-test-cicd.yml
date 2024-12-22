@@ -1,0 +1,17 @@
+name: newman api testing
+on: workflow_dispatch
+jobs:
+  set-env:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: ./test-scripts/newman-testing
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+      - name: install and run newman
+        uses: matt-ball/newman-action@master
+        with:
+          apiKey: ${{ secrets.postmanApiKey }}
+          collection: ./test-scripts/newman-testing/NewManTestingCollection.postman_collection.json
+        

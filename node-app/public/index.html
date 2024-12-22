@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Temperature Conversion</title>
+  <style>
+    /* Inline styles in index.html */
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f5f5f5;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    .container {
+      background-color: white;
+      padding: 30px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      width: 400px;
+    }
+
+    h1 {
+      text-align: center;
+      font-size: 24px;
+      margin-bottom: 20px;
+    }
+
+    .form-group {
+      margin-bottom: 15px;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 5px;
+    }
+
+    input, select {
+      width: 100%;
+      padding: 8px;
+      margin: 5px 0;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+    }
+
+    button.submit-btn {
+      width: 100%;
+      padding: 10px;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+
+    button.submit-btn:hover {
+      background-color: #45a049;
+    }
+
+    .result {
+      margin-top: 20px;
+    }
+
+    #resultMessage {
+      font-weight: bold;
+      font-size: 18px;
+    }
+
+    .correct-answer {
+      color: #f44336;
+      font-size: 16px;
+      display: none;
+    }
+
+    .gif {
+      width: 50px;
+      height: 50px;
+      display: none;
+      margin-top: 10px;
+    }
+
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Temperature Conversion for Teachers!</h1>
+    
+    <div class="form-group">
+      <label for="value">Input Value:</label>
+      <input type="number" id="value" required placeholder="Enter the temperature">
+    </div>
+    
+    <div class="form-group">
+      <label for="fromUnit">From Unit:</label>
+      <select id="fromUnit">
+        <option value="Celsius">Celsius</option>
+        <option value="Fahrenheit">Fahrenheit</option>
+        <option value="Kelvin">Kelvin</option>
+        <option value="Rankine">Rankine</option>
+      </select>
+    </div>
+    
+    <div class="form-group">
+      <label for="toUnit">To Unit:</label>
+      <select id="toUnit">
+        <option value="Celsius">Celsius</option>
+        <option value="Fahrenheit">Fahrenheit</option>
+        <option value="Kelvin">Kelvin</option>
+        <option value="Rankine">Rankine</option>
+      </select>
+    </div>
+    
+    <div class="form-group">
+      <label for="studentResponse">Student Response:</label>
+      <input type="number" id="studentResponse" required placeholder="Student's answer">
+    </div>
+    
+    <button class="submit-btn" onclick="submit()">Submit</button>
+    
+    <div id="result" class="result">
+      <p id="resultMessage"></p>
+      <p id="correctAnswer" class="correct-answer"></p>
+      
+      <!-- GIFs for correct and incorrect answers -->
+      <img id="correctGif" class="gif" src="https://media1.tenor.com/m/qkEs93I-C2UAAAAd/correct.gif" alt="Correct" style="width: 300px; height: auto;" />
+      <img id="incorrectGif" class="gif" src="https://media1.tenor.com/m/D8U9CyNuL5wAAAAd/disappointed-face-palm.gif" alt="Incorrect" style="width: 350px; height: auto;" />
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
