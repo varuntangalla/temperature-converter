@@ -254,7 +254,7 @@
 		},
 		{
 			"key": "ServiceEndPoint",
-			"value": "http://localhost:3000",
+			"value": "http://student-temp-app-dev-lb-427486858.us-east-1.elb.amazonaws.com",
 			"type": "default"
 		}
 	]
