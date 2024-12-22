@@ -57,7 +57,7 @@ export const options = {
 };
 
 // URL of the application endpoint
-const BASE_URL = 'http://localhost:3000/temp-converter/api/check-answer';
+const BASE_URL = 'http://student-temp-app-dev-lb-187186081.us-east-1.elb.amazonaws.com/temp-converter/api/check-answer';
 
 // Sample payloads for testing
 const payloads = [
