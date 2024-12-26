@@ -1,20 +1,20 @@
 name: Terraform CICD
-on: workflow_dispatch
-# on:
-#  push:
-#    branches:
-#      - main
-#      - stage
-#      - prod
-#    paths:
-#      - terraform/**
-#  pull_request:
-#    branches:
-#      - main
-#      - stage
-#      - prod
-#    paths:
-#      - 'terraform/**'
+#on: workflow_dispatch
+on:
+ push:
+   branches:
+     - main
+     - stage
+     - prod
+   paths:
+     - terraform/**
+ pull_request:
+   branches:
+     - main
+     - stage
+     - prod
+   paths:
+     - 'terraform/**'
 
 permissions:
   contents: read
