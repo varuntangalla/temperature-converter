@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1735338114137" clover="3.2.0">
-  <project timestamp="1735338114137" name="All files">
+<coverage generated="1735338369426" clover="3.2.0">
+  <project timestamp="1735338369426" name="All files">
     <metrics statements="52" coveredstatements="41" conditionals="25" coveredconditionals="17" methods="6" coveredmethods="4" elements="83" coveredelements="62" complexity="0" loc="52" ncloc="52" packages="1" files="1" classes="1"/>
     <file name="server.js" path="/Users/saivaruntangalla/Desktop/sally/my-coding-repo/temperature-converter/node-app/server.js">
       <metrics statements="52" coveredstatements="41" conditionals="25" coveredconditionals="17" methods="6" coveredmethods="4"/>

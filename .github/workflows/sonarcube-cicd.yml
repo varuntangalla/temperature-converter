@@ -40,7 +40,7 @@ jobs:
       - name: Check test coverage
         working-directory: ./node-app
         run: |
-          COVERAGE=$(node -pe "require('./coverage/coverage-summary.json').total.lines.pct")
+          COVERAGE=$(node -pe "require('./coverage/coverage-final.json').total.lines.pct")
           echo "Coverage: $COVERAGE%"
           if [ $(echo "$COVERAGE < 80" | bc -l) -eq 1 ]; then
             echo "Coverage is below 80%! Failing the build."
