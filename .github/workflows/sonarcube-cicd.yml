@@ -1,0 +1,48 @@
+name: CI/CD Sonar Pipeline for Node.js
+on: workflow_dispatch
+  # push:
+  #   branches:
+  #     - main
+  # pull_request:
+  #   branches:
+  #     - main
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      # Step 1: Checkout the code
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      # Step 2: Set up Node.js
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18
+
+      # Step 3: Install dependencies in the project directory
+      - name: Install dependencies
+        working-directory: ./node-app
+        run: npm install
+
+      # Step 4: Lint code in the project directory
+      - name: Lint code
+        working-directory: ./node-app
+        run: npm run lint
+
+      # Step 5: Run tests and generate coverage in the project directory
+      - name: Run tests
+        working-directory: ./node-app
+        run: npm test
+
+      # Step 6: Enforce test coverage (ensure coverage is >= 80%)
+      - name: Check test coverage
+        working-directory: ./node-app
+        run: |
+          COVERAGE=$(node -pe "require('./coverage/coverage-summary.json').total.lines.pct")
+          echo "Coverage: $COVERAGE%"
+          if [ $(echo "$COVERAGE < 80" | bc -l) -eq 1 ]; then
+            echo "Coverage is below 80%! Failing the build."
+            exit 1
+          fi
