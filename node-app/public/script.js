@@ -1,4 +1,5 @@
 // script.js
+// eslint-disable-next-line no-unused-vars
 const submit = async () => {
   const value = parseFloat(document.getElementById('value').value);
   const fromUnit = document.getElementById('fromUnit').value;
