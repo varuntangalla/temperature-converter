@@ -1,7 +1,7 @@
 describe('Temperature Conversion for the Teachers - Title Verification', () => {
   it('should display the correct title', () => {
     // Visit the application URL (replace with the actual URL of your app)
-    cy.visit('http://student-temp-app-dev-lb-762622184.us-east-1.elb.amazonaws.com/');
+    cy.visit('http://student-temp-app-dev-lb-762622184.us-east-1.elb.amazonaws.com/temp-converter');
     cy.get('h1').should('have.text', 'Temperature Conversion for Teachers!');
   });
 });
@@ -9,7 +9,7 @@ describe('Temperature Conversion for the Teachers - Title Verification', () => {
 describe('Temperature Conversion UI Tests', () => {
   beforeEach(() => {
     // Visit your application page
-    cy.visit('http://student-temp-app-dev-lb-762622184.us-east-1.elb.amazonaws.com/') // Replace with your website URL
+    cy.visit('http://student-temp-app-dev-lb-762622184.us-east-1.elb.amazonaws.com/temp-converter') // Replace with your website URL
   });
 
   it('should accept integer input values in the input field', () => {
