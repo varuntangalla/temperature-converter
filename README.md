@@ -7,8 +7,8 @@ This project is a web-based application designed to manage and monitor student t
 1. **Clone the Repository**:
 
    ```bash
-   git clone https://github.com/Anurag-30/student-temp-app.git
-   cd student-temp-app
+   git clone https://github.com/varuntangalla/temperature-converter.git
+   cd temperature-converter
    ```
 
 2. **Navigate to node-app directory**:
