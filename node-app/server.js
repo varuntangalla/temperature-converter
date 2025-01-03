@@ -43,8 +43,8 @@ const convertTemperature = (value, fromUnit, toUnit) => {
 };
 
 const validateAnswer = (studentResponse, correctAnswer) => {
-  //const roundedStudentResponse = Math.round(studentResponse * 10) / 10;
-  //const roundedCorrectAnswer = Math.round(correctAnswer * 10) / 10;
+  const roundedStudentResponse = Math.round(studentResponse * 10) / 10;
+  const roundedCorrectAnswer = Math.round(correctAnswer * 10) / 10;
   return studentResponse === correctAnswer;
 };
 
